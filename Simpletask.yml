@@ -1,0 +1,7 @@
+---
+  - hosts: localhost
+    
+    tasks:
+    - name: Run simple task robot file
+      command: robot Simpletask.robot
+      become:true
