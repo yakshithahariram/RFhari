@@ -22,5 +22,5 @@
         password: RF_Simpletask
         to: Haritha Sallepalli <hsallepalli@respiro.com.au>
         subject: Robot framework-EVE-NG ports status
-        body: 'Robot Framework: Simple_task results {{ pythonscript.stdout }}'
+        body: 'Robot Framework: {{ pythonscript.stdout }}'
       delegate_to: localhost
