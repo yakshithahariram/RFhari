@@ -18,9 +18,9 @@
       mail:
         host: smtp.gmail.com
         port: 587
-        username: robotframework.respiro@gmail.com
-        password: RF_Simpletask
-        to: Haritha Sallepalli <hsallepalli@respiro.com.au>
+        username: XXXXXXXXX@gmail.com
+        password: XXXXXXXX
+        to: <xxxxxxx.com.au>
         subject: Robot framework-EVE-NG ports status
         body: 'Robot Framework: {{ pythonscript.stdout }}'
       delegate_to: localhost
