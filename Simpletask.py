@@ -15,6 +15,6 @@ def main():
           ports_down.append(portlist[i])
           i=i+1
    # print("ports_up :",ports_up)
-    print("Unavailable ports from EVE-NG:",ports_down)
+    print("Unavailable ports from EVE:",ports_down)
 if __name__ == '__main__':
     main()
