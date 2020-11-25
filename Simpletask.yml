@@ -1,7 +1,26 @@
 ---
   - hosts: localhost
-    
+
     tasks:
     - name: Run simple task robot file
       command: robot Simpletask.robot
       become: true
+
+    - name: Display ports status
+      shell: /usr/bin/python3 ~/venv/rfsample/RFhari/Sample.py
+      register: pythonscript
+
+    - name: disply python script output
+      debug:
+        var: pythonscript.stdout
+
+    - name: Email the results
+      mail:
+        host: smtp.gmail.com
+        port: 587
+        username: robotframework.respiro@gmail.com
+        password: RF_Simpletask
+        to: Safal Khanal <skhanal@respiro.com.au>
+        subject: Robot framework-EVE-NG ports status
+        body: 'Robot Framework: Simple_task results {{ pythonscript.stdout }}'
+      delegate_to: localhost
