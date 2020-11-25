@@ -7,7 +7,7 @@
       become: true
 
     - name: Display ports status
-      shell: /usr/bin/python3 ~/venv/rfsample/RFhari/Sample.py
+      shell: /usr/bin/python3 ~/venv/rfsample/RFhari/Simpletask.py
       register: pythonscript
 
     - name: disply python script output
@@ -20,7 +20,7 @@
         port: 587
         username: robotframework.respiro@gmail.com
         password: RF_Simpletask
-        to: Safal Khanal <skhanal@respiro.com.au>
+        to: Haritha Sallepalli <hsallepalli@respiro.com.au>
         subject: Robot framework-EVE-NG ports status
         body: 'Robot Framework: Simple_task results {{ pythonscript.stdout }}'
       delegate_to: localhost
